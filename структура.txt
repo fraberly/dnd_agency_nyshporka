@@ -1,0 +1,17 @@
+python manage.py startapp '...'
+    створити новий директорій по конкретній функції
+        main
+            '' (гловна)
+            about
+            -mechanics[механіка]
+            -world[світ]
+        characters
+            -['' (головна)]
+            -character[персонаж конкретний]
+        inventory
+            -['' (головна)]
+            -money[гроші]
+            -weapon[зброя]
+            -armor[броня]
+            -equipment[спорядження]
+            -tools[інструменти]

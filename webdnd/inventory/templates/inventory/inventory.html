@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title  %}Frab:{{ title }}{% endblock %}
+
+{% block content  %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <ul>
+        <a href="{% url 'money' %}"><li>[гроші]</li></a>
+        <a href="{% url 'weapon' %}"><li>[зброя]</li></a>
+        <a href="{% url 'armor' %}"><li>[броня]</li></a>
+        <a href="{% url 'equipment' %}"><li>[спорядження]</li></a>
+        <a href="{% url 'tools' %}"><li>[інструменти]</li></a>
+    </ul>
+</div>
+{% endblock %}

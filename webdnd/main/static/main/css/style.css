@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #ddd;
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 5px 10px #000;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+    transition: .3s;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+header nav ul li {
+    position relative;
+    float: left;
+}
+
+header nav ul li a {
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    transition: .3s;
+}
+
+header nav ul li a:hover {
+    transform: scale(1.03);
+    text-decoration: underline;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 1;
+    width: 180px;
+    background: #222;
+    display: none;
+}
+
+nav ul li:hover > ul {
+    display: initial;
+}
+
+nav ul li ul li {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+main .features {
+    color: #000;
+    margin-top: 60px;
+    text-align: center;
+    width: 75%;
+}
+main a {
+    color: #000;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {
+    front-size: 50px;
+}
+
+main .features p {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#menu {
+    display: none;
+}
+
+header label {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 2rem;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #212121;
+        border-top: 1px solid rgba(255,255,255,.1);
+        display: none;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar ul li {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+
+    header .navbar ul li ul li {
+        background: #242424;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    label .fa-times{
+        display: none;
+    }
+
+     #menu:checked ~ label .fa-bars {
+        display: none;
+     }
+
+     #menu:checked ~ label .fa-times {
+        display: block;
+     }
+}
+
+
