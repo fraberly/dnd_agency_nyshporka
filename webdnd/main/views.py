@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import World
 
 
 def home(request):
@@ -26,6 +27,7 @@ def world(request):
     data = {
         'title': 'Світ'
     }
-    return render(request, 'main/world.html', data)
+    worlds = World.name.all()
+    return render(request, 'main/world.html', data,  worlds)
 
 
