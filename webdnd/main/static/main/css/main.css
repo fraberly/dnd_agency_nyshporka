@@ -1,56 +1,41 @@
 body {
-    background: #5c2c2c;
+    background: #ddd;
+    padding: 0 15%;
 }
 
-aside {
-    float: left;
-    background: #203820;
-    width: 15%;
-    padding: 1.5%;
-    height: 100vh;
-    color: #dffff8;
-    border-right: 5px solid #08200b;
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
-aside img {
-    width: 80px;
-    float: left;
+
+.block {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 750px;
+    background: #e8e8e8;
+    box-shadow: 0 5px 10px #aaa;
 }
-aside .logo {
-    font-size: 60px;
-    margin-left: 10px;
+
+.block li {
     font-weight: bold;
 }
-aside h3 {
-    margin-top: 30px;
-    font-size: 30px;
-}
-aside ul {
-    list-style: none
-}
-aside ul li a {
-    color: #dffff8;
-    display: block;
-    margin-top: 20px;
-    transition: transform .6s ease;
-}
-aside ul li:hover, aside ul a:hover {
-    color: #68f06b;
-    text-decoration: none;
-    transform: scale(1.05);
+
+.block p {
+    margin-top: 10px;
 }
 
-main .features {
-    float: left;
-    color: #dffff8;
-    margin-top: 60px;
-    text-align: center;
-    width: 75%;
+@media (max-width: 800px) {
+    .features {
+        margin-top: 80px;
+    }
+    body {
+        padding: 0 0%;
+    }
+    .block {
+        width: 100%;
+    }
 }
-main .features h1 {
-    front-size: 50px;
-}
-main .features p {
-    max-width: 800px;
-    margin: 20px auto;
-}
-

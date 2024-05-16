@@ -8,16 +8,15 @@
 }
 
 html {
-    font-size: 62.5%;
     overflow-x: hidden;
 }
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #ddd;
     background-size: cover;
-    background-position: center;
+    background-position: right;
 
 }
 
@@ -32,6 +31,19 @@ header {
     align-items: center;
     padding: 0 10%;
     box-shadow: 0 5px 10px #000;
+}
+
+block {
+    top: 0;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40;
+    box-shadow: 0 5px 9px #fff;
 }
 
 header .logo {
@@ -83,9 +95,9 @@ nav ul li ul li {
 main .features {
     color: #000;
     margin-top: 60px;
-    text-align: center;
-    width: 75%;
+    padding: 0 10%;
 }
+
 main a {
     color: #000;
     text-align: center;
@@ -113,9 +125,6 @@ header label {
 }
 
 @media (max-width: 800px) {
-    header {
-        padding: 2rem;
-    }
 
     header label {
         display: initial;

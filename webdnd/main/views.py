@@ -1,5 +1,10 @@
 from django.shortcuts import render
-from .models import World
+from .models import Worlds
+# from django.http import HttpResponse
+
+#
+# def all_user(request):
+#     return HttpResponse('Returning all user')
 
 
 def home(request):
@@ -24,10 +29,10 @@ def mechanics(request):
 
 
 def world(request):
-    data = {
-        'title': 'Світ'
-    }
-    worlds = World.name.all()
-    return render(request, 'main/world.html', data,  worlds)
+    worlds = Worlds.objects.all()
+    return render(request,
+                  'main/world.html',
+                  {'worlds': worlds}
+                  )
 
 

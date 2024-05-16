@@ -4,13 +4,13 @@
 
 {% block content  %}
 <div class="features">
-    <h1>{{ title }}</h1>
-<!--    <ul>-->
-<!--        {% for data in worlds %}-->
-<!--        <li>{{ world.name }}</li>-->
-<!--        <li>{{ world.description }}</li>-->
-<!--        <li>{{ world.info }}</li>-->
-<!--        {% endfor %}-->
-<!--    </ul>-->
+    <h1>Про нас</h1>
+    {% for data in worlds %}
+        <div class="block">
+            <li>{{ data.name }}</li>
+            <p>{{ data.description }}</p>
+            <p>{{ data.info }}</p>
+        </div>
+    {% endfor %}
 </div>
 {% endblock %}
