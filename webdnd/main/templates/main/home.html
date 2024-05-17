@@ -1,11 +1,17 @@
 {% extends 'main/layout.html' %}
 
-{% block title  %}Frab:{{ title }}{% endblock %}
+{% block title  %}Frab: Головна{% endblock %}
 
 {% block content  %}
 <div class="features">
-    <h1>{{ title }}</h1>
-    <h1>{{ title }}</h1>
+    <h1>Головна</h1>
 
+    {% for data in mains %}
+        <div class="block">
+<!--            <li>{{ data.name }}</li>-->
+<!--            <p>{{ data.description }}</p>-->
+            <p>{{ data.info }}</p>
+        </div>
+    {% endfor %}
 </div>
 {% endblock %}

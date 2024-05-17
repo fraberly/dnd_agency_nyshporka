@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Worlds
+from .models import Worlds, Main, Mechanics
 # from django.http import HttpResponse
 
 #
@@ -8,10 +8,9 @@ from .models import Worlds
 
 
 def home(request):
-    data = {
-        'title': 'Головна'
-    }
-    return render(request, 'main/home.html', data)
+    mains = Main.objects.all()
+    return render(request, 'main/home.html',
+                  {'mains': mains})
 
 
 def about(request):
@@ -22,10 +21,8 @@ def about(request):
 
 
 def mechanics(request):
-    data = {
-        'title': 'Механіка'
-    }
-    return render(request, 'main/mechanics.html', data)
+    mechanics = Mechanics.objects.all()
+    return render(request, 'main/mechanics.html', {'mechanics': mechanics})
 
 
 def world(request):

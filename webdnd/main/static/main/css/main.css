@@ -24,6 +24,10 @@ body {
     font-weight: bold;
 }
 
+.block p li {
+    font-weight: lighter;
+}
+
 .block p {
     margin-top: 10px;
 }
