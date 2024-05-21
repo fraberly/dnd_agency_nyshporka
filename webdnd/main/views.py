@@ -13,13 +13,6 @@ def home(request):
                   {'mains': mains})
 
 
-def about(request):
-    data = {
-        'title': 'Про нас'
-    }
-    return render(request, 'main/about.html', data)
-
-
 def mechanics(request):
     mechanics = Mechanics.objects.all()
     return render(request, 'main/mechanics.html', {'mechanics': mechanics})
