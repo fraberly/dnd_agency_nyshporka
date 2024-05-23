@@ -30,6 +30,27 @@ body {
     box-shadow: 0 5px 10px #aaa;
 }
 
+.block4 {
+    margin: 2px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background: #e8e8e8;
+    box-shadow: 0 5px 10px #aaa;
+}
+
+
+.block5 {
+    margin: 2px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background: #e8e8e8;
+    box-shadow: 0 5px 10px #aaa;
+}
+
 .blockP {
     margin: 5px;
     padding: 20px;

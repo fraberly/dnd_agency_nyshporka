@@ -1,9 +1,14 @@
 {% extends 'main/layout.html' %}
 
-{% block title  %}Frab:{{ title }}{% endblock %}
+{% block title  %}Броня{% endblock %}
 
 {% block content  %}
 <div class="features">
     <h1>Броня</h1>
+        {% for data in armor %}
+            <div class="block2">
+                <h4>{{ data.name }}</h4>
+            </div>
+        {% endfor %}
 </div>
 {% endblock %}
