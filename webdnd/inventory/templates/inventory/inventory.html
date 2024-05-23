@@ -1,16 +1,59 @@
 {% extends 'main/layout.html' %}
 
-{% block title  %}Frab:{{ title }}{% endblock %}
+{% block title  %}Інвертар{% endblock %}
 
 {% block content  %}
 <div class="features">
-    <h1>{{ title }}</h1>
+    <h1>Інвертар</h1>
     <ul>
-        <a href="{% url 'money' %}"><li>[гроші]</li></a>
-        <a href="{% url 'weapon' %}"><li>[зброя]</li></a>
-        <a href="{% url 'armor' %}"><li>[броня]</li></a>
-        <a href="{% url 'equipment' %}"><li>[спорядження]</li></a>
-        <a href="{% url 'tools' %}"><li>[інструменти]</li></a>
+        <div class="block">
+            <a href="{% url 'inventory' %}"><h2>Гроші</h2></a>
+            <p>Як і в реальному світі, для того, щоб придбати якусь річ у світі “Агентства ‘Нишпорки’” потрібні гроші. У місті Н, та й у цілій країні, вже давно використовують паперові банкноти, номіналами 1, 2, 5, 10, 20, 50 і 100 карбованців, поряд з металевими монетами, номіналами 1, 2, 5, 10, 25 і 50 копійок. 1 карбованець = 100 копійок</p>
+        </div>
+        <div class="block">
+            <a href="{% url 'weapon' %}"><h2>Зброя</h2></a>
+            <p>Деколи під час гри вашим персонажам доведеться вступати в бій. В такому випадку їм знанобиться зброя</p>
+            <li><h3>Холодна</h3></li>
+            <li><i>зброя ближнього бою</i></li>
+            {% for data in weapon %}
+                {% if data.type == 1 and data.typeclass == 1 %}
+                    <h4>{{ data.name }}</h4>
+                {% endif %}
+            {% endfor %}
+            <li><i>зброя дальнього бою</i></li>
+            <div>{% for data in weapon %}
+                {% if data.type == 1 and data.typeclass == 2 %}
+                    <h4>{{ data.name }}</h4>
+                {% endif %}
+            {% endfor %}</div>
+
+            <li><h3>Вогнепальна</h3></li>
+            {% for data in weapon %}
+                {% if data.type == 2 %}
+                    <h4>{{ data.name }}</h4>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="block">
+            <a href="{% url 'armor' %}"><h2>Броня</h2></a>
+            {% for data in armor %}
+                <h4>{{ data.name }}</h4>
+            {% endfor %}
+        </div>
+        <div class="block">
+            <a href="{% url 'equipment' %}"><h2>Спорядження</h2></a>
+            {% for data in equipment %}
+                <h4>{{ data.name }}</h4>
+            {% endfor %}
+        </div>
+        <div class="block">
+            <a href="{% url 'tools' %}"><h2>Інструменти</h2></a>
+            {% for data in tools %}
+                <h4>{{ data.name }}</h4>
+            {% endfor %}
+        </div>
+
+
     </ul>
 </div>
 {% endblock %}

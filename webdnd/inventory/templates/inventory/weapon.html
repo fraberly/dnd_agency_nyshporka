@@ -5,6 +5,29 @@
 {% block content  %}
 <div class="features">
     <h1>Зброя</h1>
+    <div class="block">
+        <li><h3>Холодна</h3></li>
+            <li><i>зброя ближнього бою</i></li>
+            {% for data in weapon %}
+                {% if data.type == 1 and data.typeclass == 1 %}
+                    <h4>{{ data.name }}</h4>
+                {% endif %}
+            {% endfor %}
+            <li><i>зброя дальнього бою</i></li>
+            {% for data in weapon %}
+                {% if data.type == 1 and data.typeclass == 2 %}
+                    <h4>{{ data.name }}</h4>
+                {% endif %}
+            {% endfor %}
+    </div>
+    <div class="block">
 
+            <li><h3>Вогнепальна</h3></li>
+            {% for data in weapon %}
+                {% if data.type == 2 %}
+                    <h4>{{ data.name }}</h4>
+                {% endif %}
+            {% endfor %}
+    </div>
 </div>
 {% endblock %}
