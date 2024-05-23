@@ -11,7 +11,7 @@ body {
 }
 
 .block {
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -20,8 +20,36 @@ body {
     box-shadow: 0 5px 10px #aaa;
 }
 
-.block li {
+.block2 {
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 750px;
+    background: #e8e8e8;
+    box-shadow: 0 5px 10px #aaa;
+}
+
+.blockP {
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 750px;
+    background: #e8e8e8;
+    box-shadow: 0 5px 10px #aaa;
+}
+
+
+.block li, .blockP li {
     font-weight: bold;
+    margin: 10px auto;
+}
+
+.block img, .blockP img {
+    width: 200px;
+    height: auto;
+    display: block;
 }
 
 .block p li {
@@ -36,10 +64,10 @@ body {
     .features {
         margin-top: 80px;
     }
-    body {
+    body, block2{
         padding: 0 0%;
     }
-    .block {
+    .block, .block2 {
         width: 100%;
     }
 }

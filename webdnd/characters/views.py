@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from .models import Characters
 
 
 def characters(request):
-    return render(request, 'characters/characters.html')
+    charactes = Characters.objects.all()
+    return render(request, 'characters/characters.html',
+                  {'charactes': charactes}
+                  )
 
 
 def character(request):
-    return render(request, 'characters/character.html')
+    charactes = Characters.objects.all()
+    return render(request, 'characters/character.html',{'charactes': charactes})

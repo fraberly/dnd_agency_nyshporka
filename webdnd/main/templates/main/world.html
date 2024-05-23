@@ -1,16 +1,18 @@
 {% extends 'main/layout.html' %}
 
-{% block title  %}Frab: Світ{% endblock %}
+{% block title  %}Світ{% endblock %}
 
 {% block content  %}
 <div class="features">
     <h1>Світ</h1>
     {% for data in worlds %}
-        <div class="block">
-            <li>{{ data.name }}</li>
-            <p>{{ data.description }}</p>
-            <p>{{ data.info }}</p>
+
+        <div {% if data.name %}class="block"{% else %} class="block2" {% endif %}>
+            {% if data.name %}<li>{{ data.name }}</li>{% endif %}
+            {% if data.description %}<p>{{ data.description }}</p>{% endif %}
+            {% if data.info %}<p>{{ data.info|safe }}</p>{% endif %}
         </div>
+
     {% endfor %}
 </div>
 {% endblock %}

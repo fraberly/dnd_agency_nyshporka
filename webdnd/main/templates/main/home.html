@@ -1,6 +1,6 @@
 {% extends 'main/layout.html' %}
 
-{% block title  %}Frab: Головна{% endblock %}
+{% block title  %}Головна{% endblock %}
 
 {% block content  %}
 <div class="features">
@@ -10,7 +10,7 @@
         <div class="block">
 <!--            <li>{{ data.name }}</li>-->
 <!--            <p>{{ data.description }}</p>-->
-            <p>{{ data.info }}</p>
+            <p>{{ data.info|safe }}</p>
         </div>
     {% endfor %}
 </div>
