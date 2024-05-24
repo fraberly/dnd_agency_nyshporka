@@ -7,7 +7,15 @@
     <h1>Броня</h1>
         {% for data in armor %}
             <div class="block2">
-                <h4>{{ data.name }}</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <h4>{{ data.name }}</h4>
+                        <td align="right">
+                            {% if data.price %}<li align="right" style="text-align:right;">{{ data.price }} карбованців</li>{% endif %}
+                        </td>
+                    </tr>
+                </table>
             </div>
         {% endfor %}
 </div>

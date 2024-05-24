@@ -5,8 +5,7 @@ from .models import Characters
 def characters(request):
     charactes = Characters.objects.all()
     return render(request, 'characters/characters.html',
-                  {'charactes': charactes}
-                  )
+                  {'charactes': charactes})
 
 
 def character(request):

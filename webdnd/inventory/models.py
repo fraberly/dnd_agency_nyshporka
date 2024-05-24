@@ -3,11 +3,13 @@ from django.db import models
 
 class Weapon(models.Model):
     name = models.CharField(max_length=100)
+    price = models.CharField(max_length=16)
     description = models.TextField()
     info = models.TextField()
     type = models.IntegerField()
     typeclass = models.IntegerField()
-    img = models.ImageField(upload_to='weapon/', blank=True, null=True)
+    img = models.ImageField(upload_to='weapon/',
+                            blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -18,10 +20,12 @@ class Weapon(models.Model):
 
 class Armor(models.Model):
     name = models.CharField(max_length=100)
+    price = models.CharField(max_length=16)
     description = models.TextField()
     info = models.TextField()
     type = models.IntegerField()
-    img = models.ImageField(upload_to='weapon/', blank=True, null=True)
+    img = models.ImageField(upload_to='weapon/',
+                            blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -32,9 +36,11 @@ class Armor(models.Model):
 
 class Equipment(models.Model):
     name = models.CharField(max_length=100)
+    price = models.CharField(max_length=16)
     description = models.TextField()
     info = models.TextField()
-    img = models.ImageField(upload_to='weapon/', blank=True, null=True)
+    img = models.ImageField(upload_to='weapon/',
+                            blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -46,9 +52,11 @@ class Equipment(models.Model):
 
 class Tools(models.Model):
     name = models.CharField(max_length=100)
+    price = models.CharField(max_length=16)
     description = models.TextField()
     info = models.TextField()
-    img = models.ImageField(upload_to='weapon/', blank=True, null=True)
+    img = models.ImageField(upload_to='weapon/',
+                            blank=True, null=True)
 
     def __str__(self):
         return self.name

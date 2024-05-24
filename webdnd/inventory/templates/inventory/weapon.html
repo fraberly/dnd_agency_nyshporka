@@ -12,7 +12,15 @@
             {% for data in weapon %}
                 {% if data.type == 1 and data.typeclass == 1 %}
                     <div class="block5">
-                        <h4>{{ data.name }}</h4>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h4>{{ data.name }}</h4>
+                                <td align="right">
+                                    {% if data.price %}<p align="right" style="text-align:right;">{{ data.price }} карбованців</p>{% endif %}
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 {% endif %}
             {% endfor %}
@@ -22,7 +30,15 @@
             {% for data in weapon %}
                 {% if data.type == 1 and data.typeclass == 2 %}
                     <div class="block5">
-                        <h4>{{ data.name }}</h4>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h4>{{ data.name }}</h4>
+                                <td align="right">
+                                    {% if data.price %}<p align="right" style="text-align:right;">{{ data.price }} карбованців</p>{% endif %}
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 {% endif %}
             {% endfor %}
@@ -33,7 +49,15 @@
         {% for data in weapon %}
             {% if data.type == 2 %}
                 <div class="block4">
-                    <h4>{{ data.name }}</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>{{ data.name }}</h4>
+                            <td align="right">
+                                {% if data.price %}<p align="right" style="text-align:right;">{{ data.price }} карбованців</p>{% endif %}
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             {% endif %}
         {% endfor %}

@@ -30,6 +30,13 @@ body {
     box-shadow: 0 5px 10px #aaa;
 }
 
+.block2 table, .block5 table, .block4 table {
+    width: 100%;
+}
+.block2 td:last-child {
+    text-align: right;
+}
+
 .block4 {
     margin: 2px;
     padding: 20px;

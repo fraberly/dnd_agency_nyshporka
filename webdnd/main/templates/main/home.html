@@ -6,12 +6,12 @@
 <div class="features">
     <h1>Головна</h1>
 
-    {% for data in mains %}
-        <div class="block">
+{% for data in mains %}
+    <div class="block">
 <!--            <li>{{ data.name }}</li>-->
 <!--            <p>{{ data.description }}</p>-->
-            <p>{{ data.info|safe }}</p>
-        </div>
-    {% endfor %}
+        <p>{{ data.info|safe }}</p>
+    </div>
+{% endfor %}
 </div>
 {% endblock %}

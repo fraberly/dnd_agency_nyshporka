@@ -1,10 +1,5 @@
 from django.shortcuts import render
 from .models import Worlds, Main, Mechanics
-# from django.http import HttpResponse
-
-#
-# def all_user(request):
-#     return HttpResponse('Returning all user')
 
 
 def home(request):
@@ -20,9 +15,6 @@ def mechanics(request):
 
 def world(request):
     worlds = Worlds.objects.all()
-    return render(request,
-                  'main/world.html',
-                  {'worlds': worlds}
-                  )
+    return render(request,'main/world.html',{'worlds': worlds})
 
 
